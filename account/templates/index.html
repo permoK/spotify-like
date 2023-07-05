@@ -1,0 +1,143 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="{% static 'styles/swiper-bundle.min.css' %}"/>
+{% endblock link %}
+
+
+{% block body %}
+<h1 class="home-lg hidden"><a href="{% url 'home' %}">Sankini</a></h1>
+
+<section class="Hero">
+    <h3> <a href="{% url 'login' %}" class="user hidden">Login</a> </h3>
+    <div class="hidden sankini-logo">
+        <div class="light hidden"></div>
+            <img src="{% static 'images/Tree_icon.svg' %}" alt="">
+    </div>
+        
+    <div class="header">
+        <h1>Experience the power of music</h1> <br>
+        <p class="home hidden">We're a brand that love to create music that makes people feel something. <br> We're really passionate about our music, and we want to share it with the world.</p>
+    </div>
+      <div class="cta"> 
+        <h3> <a href="{% url 'register' %}" class=" hidden">Explore</a> </h3></h1>
+        
+    <div>  
+</section>
+
+<section class="slider-info">
+   <div class="title">
+        <h2 class="home hidden">Music Genre</h2>
+    </div>
+    <div class="container swiper">
+        <div class="slide-container">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="{% static 'images/car.png' %}" alt="">
+                    </div>
+                    <div class="genre">
+                        <h3>Genre</h3>
+                    </div>
+                </div> 
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="{% static 'images/car.png' %}" alt="">
+                    </div>
+                    <div class="genre">
+                        <h3>Genre</h3>
+                    </div>
+                </div> 
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="{% static 'images/car.png' %}" alt="">
+                    </div>
+                    <div class="genre">
+                        <h3>Genre</h3>
+                    </div>
+                </div> 
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="{% static 'images/car.png' %}" alt="">
+                    </div>
+                    <div class="genre">
+                        <h3>Genre</h3>
+                    </div>
+                </div> 
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="{% static 'images/car.png' %}" alt="">
+                    </div>
+                    <div class="genre">
+                        <h3>Genre</h3>
+                    </div>
+                </div> 
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="{% static 'images/car.png' %}" alt="">
+                    </div>
+                    <div class="genre">
+                        <h3>Genre</h3>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+            
+</section>
+<section class="about-us">
+    <h2 class="hidden">About Us</h2>
+   <div class="content-container">
+    <div class="content1">
+        <p class="p1">{% lorem 1 b  %}{% lorem 1 b  %}</p>
+        <img class="hidden abt-img" src="{% static 'images/car.png' %}" alt="about us">
+    </div>
+    {% comment %} <div class="content2">
+        <img class="abt-img" src="{% static 'images/' %}" alt="about us">
+        <p class="p2">{% lorem 1 b  %}</p>
+    </div> {% endcomment %}
+   </div>
+</section>
+<section class="services">
+    <h2 >Services</h2>
+    <p class="hidden">
+        The things you own end up owning you. <br>
+        It's only after you lose everything that you're free to do anything
+    </p>
+
+</section>
+<section class="5">
+    <h2 class="hidden">Buy My Products Here</h2>
+    <p>
+        The things you own end up owning you. <br>
+        It's only after you lose everything that you're free to do anything
+    </p>
+
+</section>
+
+<section class="conclusion">
+    <h2 class="hidden">It's Worth Risking For</h2>
+    <div class="logos">
+        <div class="logo hidden">
+            <img src="{% static 'images/car.png' %}" alt="">
+        </div>
+        <div class="logo hidden">
+            <img src="{% static 'images/1 (1).png' %}" alt="">
+        </div>
+        <div class="logo hidden">
+            <img src="{% static 'images/1 (2).png' %}" alt="">
+        </div>
+        <div class="logo hidden">
+            <img src="{% static 'images/1 (3).png' %}" alt="">
+        </div>
+    </div>
+</section>
+    
+
+{% endblock body %}

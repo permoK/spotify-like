@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% load static  %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'styles/login.css' %}">
+{% endblock link %}
+
+
+{% block body %}
+
+
+
+<section class="container">
+    <div class='glow'></div>
+    <div class='box'>
+        <div class='borderline'></div>
+        
+        <form action="{% url 'login'%}" method="POST">
+            {% csrf_token %}
+            <h1> Sign in</h1><br>
+
+        <div class="inputBox">
+            <input type="text" name="username" required>
+            <span>Username</span>
+            <i></i>
+        </div><br>
+        <div class="inputBox">
+            <input type="password" name="password"  required>
+            <span>password</span>
+            <i></i>
+        </div>
+        <div class="links">
+            <a href="">forgot password?</a>
+            <a href="{% url 'register' %}">Sign Up</a>
+        </div>
+        <input type="submit" value="Sign in">
+        </form>
+    </div>
+</section>
+
+
+
+
+
+
+
+{% endblock body %}
+
+
