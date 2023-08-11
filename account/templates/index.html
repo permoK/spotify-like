@@ -6,7 +6,7 @@
 <!-- Link Swiper's CSS -->
 <link rel="stylesheet" href="{% static 'styles/swiper-bundle.min.css' %}"/>
 {% endblock link %}
-
+/div
 
 {% block body %}
 <h1 class="home-lg hidden"><a href="{% url 'home' %}">Sankini</a></h1>
@@ -23,80 +23,66 @@
         <p class="home hidden">We're a brand that love to create music that makes people feel something. <br> We're really passionate about our music, and we want to share it with the world.</p>
     </div>
       <div class="cta"> 
-        <h3> <a href="{% url 'register' %}" class=" hidden">Explore More Now</a> </h3></h1>
+        <h3> <a href="{% url 'register' %}" class=" hidden">Start Listening</a> </h3></h1>
         
     <div>  
 </section>
 
 <section class="slider-info">
-   <div class="title">
+   <div class='title'>
         <h2 class="home hidden">Music Genre</h2>
     </div>
-    <div class="container swiper">
-        <div class="slide-container">
-            <div class="card-wrapper swiper-wrapper">
-                <div class="card swiper-slide">
-                    <div class="image-box">
-                        <img src="{% static 'images/car.png' %}" alt="">
-                    </div>
-                    <div class="genre">
-                        <h3>Genre</h3>
-                    </div>
-                </div> 
-                <div class="card swiper-slide">
-                    <div class="image-box">
-                        <img src="{% static 'images/car.png' %}" alt="">
-                    </div>
-                    <div class="genre">
-                        <h3>Genre</h3>
-                    </div>
-                </div> 
-                <div class="card swiper-slide">
-                    <div class="image-box">
-                        <img src="{% static 'images/car.png' %}" alt="">
-                    </div>
-                    <div class="genre">
-                        <h3>Genre</h3>
-                    </div>
-                </div> 
-                <div class="card swiper-slide">
-                    <div class="image-box">
-                        <img src="{% static 'images/car.png' %}" alt="">
-                    </div>
-                    <div class="genre">
-                        <h3>Genre</h3>
-                    </div>
-                </div> 
-                <div class="card swiper-slide">
-                    <div class="image-box">
-                        <img src="{% static 'images/car.png' %}" alt="">
-                    </div>
-                    <div class="genre">
-                        <h3>Genre</h3>
-                    </div>
-                </div> 
-                <div class="card swiper-slide">
-                    <div class="image-box">
-                        <img src="{% static 'images/car.png' %}" alt="">
-                    </div>
-                    <div class="genre">
-                        <h3>Genre</h3>
-                    </div>
-                </div> 
-            </div>
+    <h1></h1>
+    <div class='media-scroller snaps-inline'>
+        <div class='media-element '> 
+            <img class='' src="{% static 'images/rnb.jpg' %}">
+            <p class='title hidden' > R&B</p>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+        <div class='media-element '> 
+            <img src="{% static 'images/trap.jpg' %}">
+            <p class='title hidden'> HipHop</p>
+        </div>
+        <div class='media-element '> 
+            <img src="{% static 'images/mykey.jpg' %}">
+            <p class='title hidden'> Reggea</p>
+        </div>
+        <div class='media-element'> 
+            <img src="{% static 'images/ghost.jpg' %}">
+            <p class='title hidden'> Dancehall</p>
+        </div>
+        <div class='media-element'> 
+            <img src="{% static 'images/pic1.jpg' %}">
+            <p class='title hidden'> Souls</p>
+        </div>
+        <div class='media-element'> 
+            <img src="{% static 'images/pop.jpg' %}">
+            <p class='title hidden'> Acoustics</p>
+        </div>
+        <div class='media-element'> 
+            <img src="{% static 'images/live.jpg' %}">
+            <p class='title hidden'> Jazz</p>
+        </div>
+        <div class='media-element'> 
+            <img src="{% static 'images/mykey.jpg' %}">
+            <p class='title hidden'> Pop</p>
+        </div>
+        <div class='media-element'> 
+            <img src="{% static 'images/collo.jpg' %}">
+            <p class='title hidden'> Old School</p>
+        </div>
+        <div class='media-element'> 
+            <img src="{% static 'images/lights.jpg' %}">
+            <p class='title hidden'> Hillsongs</p>
+        </div>
     </div>
             
 </section>
 <section class="about-us">
-    <h2 class="hidden">About Us</h2>
+    <h2 class="hidden">Live events</h2>
    <div class="content-container">
     <div class="content1">
-        <p class="p1">{% lorem 1 b  %}{% lorem 1 b  %}</p>
-        <img class="hidden abt-img" src="{% static 'images/car.png' %}" alt="about us">
+        <p class=""> <h1> Travel to see your favourite artist perform</h1></p>
+        {% comment %} <img class="hidden abt-img" src="{% static 'images/live.jpg' %}" alt="about us"> {% endcomment %}
     </div>
     {% comment %} <div class="content2">
         <img class="abt-img" src="{% static 'images/' %}" alt="about us">
@@ -104,39 +90,42 @@
     </div> {% endcomment %}
    </div>
 </section>
+
 <section class="services">
-    <h2 >Services</h2>
+    <div class='service-content'>
+        <h2 >Services</h2>
     <p class="hidden">
         The things you own end up owning you. <br>
         It's only after you lose everything that you're free to do anything
     </p>
+    </div>
+    <img src="{% static 'images/feelit.jpg' %}">
 
 </section>
-<section class="5">
+<section class="conclusion">
+    <h2 class="hidden">It's Worth Risking For</h2>
+    <div class="logos">
+        <div class="logo hidden">
+            <img src="{% static 'images/more1.jpg' %}" alt="">
+        </div>
+        <div class="logo hidden">
+            <img src="{% static 'images/more2.jpg' %}" alt="">
+        </div>
+        <div class="logo hidden">
+            <img src="{% static 'images/more3.jpg' %}" alt="">
+        </div>
+        <div class="logo hidden">
+            <img src="{% static 'images/more4.jpg' %}" alt="">
+        </div>
+    </div>
+</section>
+<section class="live-events">
     <h2 class="hidden">Buy My Products Here</h2>
     <p>
         The things you own end up owning you. <br>
         It's only after you lose everything that you're free to do anything
     </p>
 
-</section>
-
-<section class="conclusion">
-    <h2 class="hidden">It's Worth Risking For</h2>
-    <div class="logos">
-        <div class="logo hidden">
-            <img src="{% static 'images/car.png' %}" alt="">
-        </div>
-        <div class="logo hidden">
-            <img src="{% static 'images/1 (1).png' %}" alt="">
-        </div>
-        <div class="logo hidden">
-            <img src="{% static 'images/1 (2).png' %}" alt="">
-        </div>
-        <div class="logo hidden">
-            <img src="{% static 'images/1 (3).png' %}" alt="">
-        </div>
-    </div>
 </section>
     
 

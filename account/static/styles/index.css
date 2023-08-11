@@ -31,7 +31,7 @@ body{
 @media (max-width: 800px) {
     .header h1{
         -webkit-text-stroke: 0;
-        font-size: 3.3rem;
+        font-size: 2.3rem;
        
     }
     .content1 img{
@@ -101,11 +101,11 @@ section{
     display: block;
     /* place-items: center; */
     align-content: center;
-    min-height: 70vh;
+    min-height: 50vh;
 }
 
 
-/* Hero section */
+/* **********Hero section ************/
 section.Hero{
     background: linear-gradient(rgb(0, 0, 0), rgba(113, 255, 47, 0.349));
     height: 100vh;
@@ -117,44 +117,147 @@ section.Hero{
 }
 
 /* slider section */
-.container{
-    max-width: 1120px;
-    width: 100%;
-    background-color: grey;
-    padding: 30px 0;
+.slider-info{
+    background: linear-gradient(45deg, black,black, rgba(1, 51, 1, 0.863));
+    color: rgb(255, 255, 255);
+    display: flow-root;
+
+  }
+
+.slider-info h2{
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
 }
-.card{
-    background-color: #3c3d3c00;
-    border-radius: 8px;
+
+.media-scroller::-webkit-scrollbar{
+    display: none;
+}
+.media-scroller{
+    
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 310px;
+
+    padding: 0 1rem 1rem;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.media-element{
+    display: grid;
+    gap: .5rem;
+    grid-template-rows: min-content;
+    padding: .3rem;
+    background:linear-gradient(rgba(9, 6, 12, 0.527),rgba(0, 0, 0, 0.38)) ;
+    border-radius: 2px;
     
 }
-.card .image-box{
-    height: 200px;
-}
-.card .image-box img{
+.media-element > img{
+    inline-size: 100%;
+    aspect-ratio: 12 / 9;
+    object-fit: cover;
+    height: auto;
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
 }
-.card .genre{
-    display: flex;
-    align-items: center;
-    column-gap: 12px;
-    padding: 15px;
+
+
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+
 }
-.card .genre h3{
-    color: rgb(228, 53, 53);
-    font-size: 20px;
-    font-weight: bolder;
+
+.snaps-inline > *{
+    scroll-snap-align: start;
+    scroll-padding-inline: 1rem;
+}    
+    
+    
+
+
+.c2{
+    grid-auto-columns: 220px;
+    color: chartreuse;
 }
+
+.c3 .media-element{
+    border-radius: 0 0 25px ;
+    grid-auto-columns: 215px;
+    color: lime;
+    
+}
+
+.c3 .media-element > img{
+    border-radius: 10px;
+}
+
+.media-element{
+    transform-origin: 50% 65%;
+    transition: transform .5s, filter .5s ease-in-out;
+    filter: grayscale(0);
+    /* -webkit-mask-image: linear-gradient(to bottom, #d5101052, #dbd4d4); */
+}
+
+.media-element:hover{
+    transform: scale(1.05) ;
+    filter: grayscale(0);
+    box-shadow: 3px 3px 3px 3px rgba(35, 36, 35, 0.56);
+    
+}
+.media-element p{
+    font-size: 1.3rem;
+    font-weight:800;
+}
+
+.media-element p:nth-child(1){
+    transition-delay: 200ms;
+}
+.media-element p:nth-child(2){
+    transition-delay: 400ms;
+}
+
+.media-element p:nth-child(3){
+    transition-delay: 600ms;
+}
+
+.media-element p:nth-child(4){
+    transition-delay: 700ms;
+}
+.media-element p:nth-child(5){
+    transition-delay: 800ms;
+}
+.media-element p:nth-child(6){
+    transition-delay: 900ms;
+}
+.media-element p:nth-child(7){
+    transition-delay: 1000ms;
+}
+.media-element p:nth-child(8){
+    transition-delay: 1200ms;
+}
+.media-element p:nth-child(9){
+    transition-delay: 2000ms;
+}
+
 
 
 /* end slider section */
 
+
+
 /* about us section */
 section.about-us{
-    min-height: 100vh;
-    margin-bottom: 10rem;
+    background-image: url("../images/events.jpg");
+    z-index: -1;
+    min-height: 60vh;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    /* box-shadow: 0 0 7px 1px #ffffff,  0 0 140px 9px #15ff00; */
 }
 section h2{
     display: flex;
@@ -203,20 +306,36 @@ section.about-us p.p1{
 .services{
     position: relative;
     background-color: rgb(250, 4, 250);
+    height: 100vh;
+}
+.service-content{
+    position: absolute;
+}
+.services img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 
-
 /* conclusion section */
-
+.conclusion{
+    position:relative;
+    height: 54vh;
+    background-color: brown;
+}
 .logos{
     justify-content: center;
     display: flex;
+    position: relative;
+}
+.logos img{
+    position: relative;
 }
 /* end conclusion */
 
 
-/* /////end section///// */
+/* ***************end section********** */
 .hidden{
     opacity: 0;
     filter: blur(5px);
@@ -245,7 +364,7 @@ section.about-us p.p1{
     background-size: cover;
     display: flex ;
     flex-direction: column;
-    width: 10vw;
+    width: 20vw;
     height: 10vh;
     float: left;
     margin-left: 1rem;
@@ -298,11 +417,7 @@ section.about-us p.p1{
   }
 
 
-.slider-info{
-    background-color: aquamarine;
-    color: rgb(238, 135, 8);
-    display: flow-root;
-  }
+
 .title{
     position: relative;
     display: grid;
