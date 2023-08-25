@@ -56,7 +56,7 @@
     transition: backdrop-filter 0.3s;
   }
   .navbar a{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     display: block;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
