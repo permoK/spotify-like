@@ -205,8 +205,9 @@ section.Hero{
     
 }
 .media-element p{
-    font-size: 1.3rem;
+    font-size: .8rem;
     font-weight:800;
+    color: color(srgb 0.89 0.8 0.67);
 }
 
 .media-element p:nth-child(1){
@@ -238,7 +239,14 @@ section.Hero{
 .media-element p:nth-child(9){
     transition-delay: 2000ms;
 }
-
+p.first-image{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    top: 53%;
+    left: 13%;
+    font-size: xx-large;
+}
 
 
 /* end slider section */
@@ -330,6 +338,16 @@ section.about-us p.p1{
 .logos img{
     position: relative;
 }
+
+p
+{
+    top: 17rem;    
+    left: 4rem;    
+    display: flex;    
+    position: absolute;
+
+}
+
 /* end conclusion */
 
 
@@ -419,7 +437,7 @@ section.about-us p.p1{
 .title{
     position: relative;
     display: grid;
-    justify-items: center;
+    justify-items: self-start;
     margin-top: 2rem;
 }
 
