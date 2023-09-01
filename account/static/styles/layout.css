@@ -77,14 +77,14 @@
 /* footer */
 
 .footer{
-  background-color: #201f1f;
+  background-color: #000000;
   position: relative;
   top: 100%;
   bottom: 0;
   right: 0;
   left: 0;
   height: 6rem;
-  color:gray
+  color:rgb(255, 255, 255)
   
 }
 .footer_container{

@@ -109,8 +109,6 @@ section{
 section.Hero{
     background: linear-gradient(rgb(0, 0, 0), rgba(113, 255, 47, 0.349));
     height: 100vh;
-    height: 100svh;
-    height: 100dvh;
     display: grid;
     align-content: space-between;
     /* -webkit-text-stroke-color: ; */
@@ -165,12 +163,12 @@ section.Hero{
 
 
 .snaps-inline{
-    scroll-snap-type: inline; 
+    scroll-snap-type: inline mandatory; 
 
 }
 
 .snaps-inline > *{
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
     scroll-padding-inline: 1rem;
 }    
     
