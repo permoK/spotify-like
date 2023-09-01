@@ -165,7 +165,7 @@ section.Hero{
 
 
 .snaps-inline{
-    scroll-snap-type: inline mandatory;
+    scroll-snap-type: inline; 
 
 }
 
@@ -396,7 +396,7 @@ section.about-us p.p1{
 }
 .sankini-logo img{
     color: white;
-    width: 10rem;
+    width: 4rem;
     height: auto;
 }
 .light{
