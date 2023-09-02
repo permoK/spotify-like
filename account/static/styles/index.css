@@ -1,4 +1,38 @@
+/* Default styles for all screen sizes */
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+    /* Add your styles for large screens here */
+}
+
+/* Medium screens (tablets and small desktops) */
+@media (max-width: 1199px) {
+    
+}
+
+/* Small screens (tablets and large mobile devices) */
+@media (max-width: 992px) {
+    /* Add your styles for small screens here */
+}
+
+/* Extra small screens (mobile devices) */
+@media (max-width: 768px) {
+    /* Add your styles for extra small screens here */
+}
+
+/* Extra small screens (mobile devices) */
+@media (max-width: 576px) {
+    /* Add your styles for extra small screens here */
+}
+
+/* Custom media query - example */
+@media (max-width: 480px) {
+    /* Add your custom styles for a specific screen size here */
+}
+
+
 body{
+
     background-color: rgb(2, 2, 2);
     color:aliceblue;
  
