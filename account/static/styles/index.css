@@ -46,6 +46,7 @@ body{
     section.Hero{
         height: 550px;
     }
+    
 }
 .cta{
     margin-bottom: 20rem;
@@ -339,12 +340,32 @@ section.about-us p.p1{
     position: relative;
 }
 
-p
+.description-container
 {
-    top: 17rem;    
-    left: 4rem;    
-    display: flex;    
+    top: 10rem;    
+    left: 2rem;    
+    flex-wrap: wrap; 
     position: absolute;
+    font-size: x-large;
+    font-weight: bolder;
+}
+.description p{
+    font-size: xx-large;
+    position: relative;
+}
+span.middle, span.top, span.bottom{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+span.top{
+    
+}
+span.middle{
+    font-size: xxx-large;
+    color: lime;
+}
+span.bottom{
 
 }
 
