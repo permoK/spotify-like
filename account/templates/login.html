@@ -10,7 +10,10 @@
 
 
 <section class="container">
-    <div class='glow'></div>
+    <div class='glow'></div> 
+    {% for message in messages %}
+            <span style="color: white; top: 15%;">{{message}}</span>
+        {% endfor %}
     <div class='box'>
         <div class='borderline'></div>
         
@@ -32,6 +35,7 @@
             <a href="">forgot password?</a>
             <a href="{% url 'register' %}">Sign Up</a>
         </div>
+       
         <input type="submit" value="Sign in">
         </form>
     </div>

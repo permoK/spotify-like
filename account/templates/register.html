@@ -10,7 +10,7 @@
 {% comment %} <h1> register</h1> {% endcomment %}
 <div class="reg-title">
     <h2> Join Us Now</h2>
-</div>
+</div> {{form.errors}}
 <section class="container">
     <div class='glow'></div>
     <div class='box'>
@@ -19,32 +19,36 @@
         <form action="{% url 'register'%}" method="POST">
             {% csrf_token %}
             <h1> Sign Up</h1><br>
-           {{form.username}}
-        {% comment %} <div class="inputBox">
-            <input type="text"  required>
-            <span>Username</span>
-            <i></i>
-        </div><br>
-        <div class="inputBox">
-            <input type="text"  required>
+            <div class="inputBox">
+                {{form.username}}
+                {% comment %} <input type="text"  required> {% endcomment %}
+                <span>Username</span>
+                <i></i>
+            </div><br>
+            <div class="inputBox" required>
+                {{form.email}}
+            {% comment %} <input type="text"  required> {% endcomment %}
             <span>E-mail</span>
             <i></i>
         </div><br>
         <div class="inputBox">
-            <input type="password"  required>
-            <span>password</span>
-            <i></i>
-        </div><br>
-        <div class="inputBox">
-            <input type="password"  required>
-            <span>confirm password</span>
-            <i></i>
-        </div> {% endcomment %}
-        <div class="links">
-            <a href=""></a>
-            <a href="{% url 'login' %}">Sign in instead?</a>
-        </div>
-        <input type="submit" value="Sign Up">
+                {% comment %} <input type="password"  required> {% endcomment %}
+                {{form.password1}}
+                <span>password</span>
+                <i></i>
+            </div><br>
+            <div class="inputBox">
+                {% comment %} <input type="password"  required> {% endcomment %}
+                {{form.password2}}
+                <span>confirm password</span>
+                <i></i>
+            </div>
+           
+            <div class="links">
+                <a href=""></a>
+                <a href="{% url 'login' %}">Sign in instead?</a>
+            </div>
+            <input type="submit" value="Sign Up">
         </form>
     </div>
 </section>
