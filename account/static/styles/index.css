@@ -23,10 +23,16 @@
 /* Extra small screens (mobile devices) */
 @media (max-width: 576px) {
     /* Add your styles for extra small screens here */
+    .description-container{
+        top: 4rem;
+    }
 }
 
 /* Custom media query - example */
-@media (max-width: 480px) {
+@media (min-width: 289px) {
+    .description-container{
+        top: 4rem;
+    }
     /* Add your custom styles for a specific screen size here */
 }
 

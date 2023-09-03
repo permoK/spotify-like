@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 
@@ -9,10 +9,18 @@ def login_user(request ):
 
 
 def register_user(request):
-    form = UserCreationForm()
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = UserCreationForm()
     
-    context = {"form": form}
-    return render(request, template_name="register.html")
+    
+    return render(request,"register.html", {
+        "form":form,
+    })
 
 def home(request):
     return render(request, template_name="index.html")

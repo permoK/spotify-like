@@ -16,10 +16,11 @@
     <div class='box'>
         <div class='borderline'></div>
         
-        <form action="{% url 'login'%}" method="POST">
+        <form action="{% url 'register'%}" method="POST">
             {% csrf_token %}
             <h1> Sign Up</h1><br>
-        <div class="inputBox">
+            {{form.as_p}}
+        {% comment %} <div class="inputBox">
             <input type="text"  required>
             <span>Username</span>
             <i></i>
@@ -38,7 +39,7 @@
             <input type="password"  required>
             <span>confirm password</span>
             <i></i>
-        </div>
+        </div> {% endcomment %}
         <div class="links">
             <a href=""></a>
             <a href="{% url 'login' %}">Sign in instead?</a>
