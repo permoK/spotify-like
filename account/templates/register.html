@@ -19,7 +19,9 @@
         <form action="{% url 'register'%}" method="POST">
             {% csrf_token %}
             <h1> Sign Up</h1><br>
-            {{form.as_p}}
+            {% for field in form %}
+                {{field[0]}}
+            {% endfor %}
         {% comment %} <div class="inputBox">
             <input type="text"  required>
             <span>Username</span>

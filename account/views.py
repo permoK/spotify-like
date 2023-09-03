@@ -3,6 +3,7 @@ from django.http import HttpRequest, HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
+from .forms import CreateUserForm
 
 def login_user(request ):
     return render(request, template_name="login.html")
@@ -10,12 +11,12 @@ def login_user(request ):
 
 def register_user(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('login')
     else:
-        form = UserCreationForm()
+        form = CreateUserForm()
     
     
     return render(request,"register.html", {
