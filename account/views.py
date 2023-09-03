@@ -6,6 +6,8 @@ from django.contrib.auth import authenticate, login, logout
 
 from django.contrib.auth.decorators import login_required
 
+from django.utils import timezone
+import datetime
 from django.contrib import messages
 # Create your views here.
 from .forms import CreateUserForm
@@ -47,8 +49,18 @@ def home(request):
     return render(request, template_name="index.html")
 @login_required(login_url='login')
 def songs(request):
-
-    return render(request, template_name="songs.html")
+    time = datetime.datetime.now()
+    ctime = time.hour
+    ntime = ""
+    if ctime < 11:
+        ntime = "good morning"
+    elif ctime < 17:
+        ntime = "afternoon"
+    else:
+        ntime = "evening"
+    return render(request,"songs.html",{
+        "time": ntime
+    })
 
 def logout_user(request):
     logout(request)
