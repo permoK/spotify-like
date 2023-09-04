@@ -55,9 +55,9 @@ def songs(request):
     if ctime < 11:
         ntime = "good morning"
     elif ctime < 17:
-        ntime = "afternoon"
+        ntime = "good afternoon"
     else:
-        ntime = "evening"
+        ntime = "good evening"
     return render(request,"songs.html",{
         "time": ntime
     })
