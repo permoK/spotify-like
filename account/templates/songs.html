@@ -1,10 +1,11 @@
 {% extends 'layout.html' %}
 {% load static %}
+{% block link %}<link rel="stylesheet" href="{% static 'styles/songs.css' %}">{% endblock link %}
 
 {% block body %}
 <h1> songs </h1><br>
 
-<h2> {{time}}, {{request.user}}  </h2>
+<h5> {{time}}, {{request.user}}  </h5>
 
 <a href="{% url 'logout' %}"> logout</a>
 

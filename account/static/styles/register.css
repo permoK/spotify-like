@@ -40,6 +40,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100%;
+    margin-top: 20%;
+    margin-bottom: 15%;
     
 }
 .box{
@@ -224,7 +226,7 @@ color: rgb(214, 19, 19);
     opacity: .8;
 }
 .glow{
-    background-color: #ff000c;
+    background: linear-gradient(hsl(241, 100%, 50%),hsl(2, 100%, 50%));
     position: absolute;
     width: 20rem;
     height: 20rem;

@@ -35,7 +35,7 @@ def register_user(request):
         if form.is_valid():
             form.save()
             name = form.cleaned_data.get("username")
-            messages.success(request, "account for "+ name + " was created succesfully")
+            messages.success(request, "account created succesfully")
             return redirect('login')
     else:
         form = CreateUserForm()
@@ -52,7 +52,7 @@ def songs(request):
     time = datetime.datetime.now()
     ctime = time.hour
     ntime = ""
-    if ctime < 11:
+    if ctime <= 11:
         ntime = "good morning"
     elif ctime < 17:
         ntime = "good afternoon"
