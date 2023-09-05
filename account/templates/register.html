@@ -12,7 +12,20 @@
     <h2> Join Us Now</h2>
 </div> 
 
-
+<span style="color: white; top: 28%; position:absolute
+    ;" >
+ <ul>
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>        {% comment %} {% for error in form.errors %}
+        <p> {{error}} </p>
+        {% endfor %} {% endcomment %}
+    
+    
+    </span>
 <section class="container">
     <div class='glow'></div>
     <div class='box'>
@@ -52,14 +65,7 @@
             </div>
             <input type="submit" value="Sign Up">
         </form>
-    </div><span style="color: white; top: 15%;" >
-        {{form.errors}}
-        {% comment %} {% for error in form.errors %}
-        <p> {{error}} </p>
-        {% endfor %} {% endcomment %}
-    
-    
-    </span>
+    </div>
 </section>
 
 
