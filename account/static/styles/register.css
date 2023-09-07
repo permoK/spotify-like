@@ -47,7 +47,7 @@ body{
 .box{
     position: relative;
     width: 20rem;
-    height: 55rem;
+    height: 35rem;
     background-color: #0f0f0f;
     border-radius: .7rem;
     overflow: hidden;
@@ -124,7 +124,7 @@ body{
    z-index: 2;
    display: flex;
    flex-direction: column;
-   height: 54.5rem;
+   height: 34.5rem;
    
 
 }
