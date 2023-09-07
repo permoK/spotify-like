@@ -5,8 +5,9 @@
 {% block body %}
 <h1> songs </h1><br>
 
-<h5> {{time}}, {{request.user}}  </h5>
+<h4> {{time}},</h4>
+<h5> {{request.user}}  </h5>
 
-<a href="{% url 'logout' %}"> logout</a>
+<h3 ><a style="color:red; text-decoration:none;" href="{% url 'logout' %}"> logout</a></h3>
 
 {% endblock body %}
