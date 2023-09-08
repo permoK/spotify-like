@@ -288,7 +288,24 @@ p.first-image{
     left: 13%;
     font-size: xx-large;
 }
-
+.wrapper{
+    height: 1rem;
+    width: 9rem;
+    background-color: #05091a;
+    z-index: 200;
+    position: absolute;
+    top: 69%;
+    left: 7%;
+}
+.wrapper::before{
+    height: 1rem;
+    width: 9rem;
+    background-color: #05091a;
+    z-index: 200;
+    position: absolute;
+    top: 6%;
+    left: 7%; 
+}
 
 /* end slider section */
 
