@@ -291,7 +291,7 @@ p.first-image{
 .wrapper{
     height: 1rem;
     width: 9rem;
-    background-color: #05091a;
+    background-color: hsl(22, 100%, 42%);
     z-index: 200;
     position: absolute;
     top: 69%;
@@ -300,7 +300,7 @@ p.first-image{
 .wrapper::before{
     height: 1rem;
     width: 9rem;
-    background-color: #05091a;
+    background-color: #a09219;
     z-index: 200;
     position: absolute;
     top: 6%;
