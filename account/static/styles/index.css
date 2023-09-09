@@ -300,7 +300,7 @@ p.first-image{
 .wrapper_after{
     height: 2rem;
     width: 1rem;
-    background-color: #a09219;
+    background-color: hsl(0deg 59.42% 40.59%);
     z-index: 200;
     position: absolute;
     top: 55%;
