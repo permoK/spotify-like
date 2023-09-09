@@ -297,14 +297,14 @@ p.first-image{
     top: 69%;
     left: 7%;
 }
-.wrapper::before{
-    height: 1rem;
-    width: 9rem;
+.wrapper_after{
+    height: 2rem;
+    width: 1rem;
     background-color: #a09219;
     z-index: 200;
     position: absolute;
-    top: 6%;
-    left: 7%; 
+    top: 55%;
+    left: 6%; 
 }
 
 /* end slider section */
