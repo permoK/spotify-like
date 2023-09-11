@@ -432,26 +432,26 @@ span.bottom{
 /* ***************end section********** */
 .hidden{
     opacity: 0;
-    filter: blur(5px);
+    /* filter: blur(5px); */
     transform: translateX(-100%);
     transition: all 1.5s;
 }
 .home{
     opacity: 0;
-    filter: blur(5px);
+    /* filter: blur(5px); */
     transform: translateY(200%);
     transition: all 2s;
 }
 .home-lg{
     opacity: 0;
-    filter: blur(5px);
+    /* filter: blur(5px); */
     transform: translateY(550%);
     transition: all 2s;
 }
 
 .show{
     opacity: 1;
-    filter: blur(0);
+    /* filter: blur(0); */
     transform: translateX(0);
 }
 .logo{

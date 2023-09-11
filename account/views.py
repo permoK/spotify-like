@@ -63,3 +63,7 @@ def songs(request):
 def logout_user(request):
     logout(request)
     return redirect("login")
+
+
+def is_user_logged_out(user):
+    return not user.is_authenticated
