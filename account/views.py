@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django.contrib.auth import authenticate, login, logout
 
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 from django.utils import timezone
 import datetime
@@ -12,7 +12,7 @@ from django.contrib import messages
 # Create your views here.
 from .forms import CreateUserForm
 
-def login_user(request ):
+def login_user(request):
 
     if request.method == "POST":
         username = request.POST.get('username')
@@ -62,8 +62,12 @@ def songs(request):
 
 def logout_user(request):
     logout(request)
+    messages.success(request, "logged out successfully")
     return redirect("login")
 
 
 def is_user_logged_out(user):
     return not user.is_authenticated
+
+#logout required to access some pages
+deco = user_passes_test(is_user_logged_out, login_url='songs')
