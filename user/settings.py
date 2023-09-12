@@ -119,7 +119,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 
-# settings.py
+# cookies settings
 
 # Use Django's built-in authentication backend
 AUTHENTICATION_BACKENDS = [
