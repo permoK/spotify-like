@@ -49,7 +49,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 
-    #sessions
+    #login auth sessions
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
 
