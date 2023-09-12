@@ -48,6 +48,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+
+    #sessions
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
 
 ROOT_URLCONF = "user.urls"
@@ -119,14 +122,14 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 
-# cookies settings
+# # cookies settings
 
-# Use Django's built-in authentication backend
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-]
+# # Use Django's built-in authentication backend
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+# ]
 
-# Configure session settings
-SESSION_ENGINE = 'django.contrib.sessions.backends.db'
-SESSION_COOKIE_SAMESITE = 'None'  # Adjust SameSite attribute as needed
-SESSION_COOKIE_SECURE = True  # Use this if your site is served over HTTPS
+# # Configure session settings
+# SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+# SESSION_COOKIE_SAMESITE = 'None'  # Adjust SameSite attribute as needed
+# SESSION_COOKIE_SECURE = True  # Use this if your site is served over HTTPS
