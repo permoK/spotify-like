@@ -7,4 +7,4 @@ Since this app is a music app inspired from the 🐐 of music production to peop
 Resources such as the power to search your favourite playlist, artist and songs of best choice.
 
 Payment methods.
-We will integrate mpesa api, visa, mastercard and other electronic payment methods
+We will integrate mpesa api, Paypal, visa, mastercard and other electronic payment methods.
