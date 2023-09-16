@@ -1,0 +1,11 @@
+from django.db import models
+
+# Create your models here.
+
+class artist(models.Model):
+    firstname = models.CharField(length=200)
+    lastname = models.CharField(length=200)
+    email = models.EmailField(length=200)
+    Age = models.IntegerField()
+    password = models.CharField(length=10)
+
