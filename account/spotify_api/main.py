@@ -74,7 +74,7 @@ for idx, genre in enumerate(gen["genres"]):
     print(f"{idx + 1}. {genre}")
 
 #artist
-results = search_for_artist(token, "JayZ")
+results = search_for_artist(token, "Quavo")
 artist_id = results["id"]
 artist_name = results["name"]
 artist_image = results["images"]
