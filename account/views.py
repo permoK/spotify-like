@@ -12,7 +12,8 @@ from django.contrib import messages
 from .forms import CreateUserForm
 
 #spotify api
-from sp
+
+from  .spotify_api import main
 
 # Create your views here.
 
