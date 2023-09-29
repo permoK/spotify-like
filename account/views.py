@@ -13,7 +13,7 @@ from .forms import CreateUserForm
 
 #spotify api
 
-from  .spotify_api import main
+from  account.spotify_api.main import *
 
 # Create your views here.
 
@@ -50,8 +50,11 @@ def register_user(request):
 
 def home(request):
     return render(request, template_name="index.html")
+
+
 @login_required(login_url='login')
 def songs(request):
+    
     time = datetime.datetime.now()
     ctime = time.hour
     ntime = ""
@@ -61,8 +64,17 @@ def songs(request):
         ntime = "good afternoon"
     else:
         ntime = "good evening"
+    #spotify_api
+    gen = get_available_genre(token)
+
+    for genre in enumerate(gen["genres"]):
+        genres = genre
+ 
     return render(request,"songs.html",{
-        "time": ntime
+        "time": ntime,
+        "gen": gen,
+        "gen_items":gen["genres"]
+        
     })
 
 def logout_user(request):
