@@ -67,8 +67,6 @@ def songs(request):
     #spotify_api
     gen = get_available_genre(token)
 
-    for genre in enumerate(gen["genres"]):
-        genres = genre
  
     return render(request,"songs.html",{
         "time": ntime,
@@ -88,3 +86,12 @@ def is_user_logged_out(user):
 
 #logout required to access some pages
 deco = user_passes_test(is_user_logged_out, login_url='songs')
+
+
+def search(request):
+    
+
+    return render(request, "search.html",{
+        "search":search
+
+        })

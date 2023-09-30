@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block link %}<link rel="stylesheet" href="{% static 'styles/songs.css' %}">{% endblock link %}
 
@@ -9,8 +9,13 @@
 <h5> {{request.user}}  </h5>
 <br>
 
-{%for genre in gen_items%}
-{%endfor%}
+<a href="{% url 'search'  %}">
+	search
+</a>
+
 <h3 ><a style="color:red; text-decoration:none;" href="{% url 'logout' %}"> logout</a></h3>
 
+{%for genre in gen_items%}
+<li>{{genre}}</li>
+{%endfor%}
 {% endblock body %}

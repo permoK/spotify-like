@@ -8,4 +8,6 @@ urlpatterns = [
     path("register/", views.deco(views.register_user), name= "register"),
     path("songs/", (views.songs), name="songs"),
     path("logout/", (views.logout_user),name="logout"),
+    path("search/", (views.search), name="search"),
+
 ]
