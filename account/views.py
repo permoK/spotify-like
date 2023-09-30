@@ -90,8 +90,15 @@ deco = user_passes_test(is_user_logged_out, login_url='songs')
 
 def search(request):
     
+    a_name = 'Jay Z'
+
+    results = search_for_artist(token, a_name   )
+    a_id = artist_id
+    name = artist_name
+    a_image = artist_image
 
     return render(request, "search.html",{
-        "search":search
+        "search":search,
+        "a_name": name,
 
         })

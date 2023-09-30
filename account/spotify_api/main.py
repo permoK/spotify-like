@@ -75,7 +75,8 @@ for idx, genre in enumerate(gen["genres"]):
                 genres = (f"{idx + 1}. {genre}")
 
 #artist
-results = search_for_artist(token, "Quavo")
+#a_name = ''
+#results = search_for_artist(token, a_name)
 artist_id = results["id"]
 artist_name = results["name"]
 artist_image = results["images"]
