@@ -1,4 +1,14 @@
-<h1>hello search me</h1>
+{% extends 'base.html'  %}
+{% load static  %}
 
 
-{{a_name}}
+{% block link  %}
+<link rel="stylesheet" href="{% static 'styles/search.css'  %}">
+{% endblock  %}
+
+{% block body  %}
+
+<h1>Hello, search me</h1>
+
+
+{% endblock  %}
