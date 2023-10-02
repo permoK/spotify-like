@@ -3,12 +3,32 @@
 {% block link %}<link rel="stylesheet" href="{% static 'styles/songs.css' %}">{% endblock link %}
 
 {% block body %}
+
 <h1> songs </h1><br>
+<section class="navbar_container">
+	<div class=logo_container>
 
-<h4> {{time}},</h4>
-<h5> {{request.user}}  </h5>
-<br>
 
+	</div>
+	<div class="search_container">
+
+
+	</div>
+
+	<div class="profile_container">
+		<div class="greetings_container">
+			<h4> {{time}},</h4>
+			<h5> {{request.user}}  </h5>
+			<br>
+		</div>
+
+		<div class="profile">
+
+		</div>
+
+	</div>
+
+</section>
 <a href="{% url 'search'  %}">
 	search
 </a>
@@ -18,4 +38,12 @@
 {%for genre in gen_items%}
 <li>{{genre}}</li>
 {%endfor%}
+
+
+
+
+
+
+
 {% endblock body %}
+
