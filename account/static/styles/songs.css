@@ -1,8 +1,10 @@
 body{
-    background-color: hsl(203deg 5% 13%);
-    color: #fff;
+    background-color: black;
+    color: blue;
 }
 
 .c-line{
-    background-color: #fff;
+    background-color: orange;
 }
+
+

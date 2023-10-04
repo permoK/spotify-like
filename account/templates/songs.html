@@ -3,18 +3,20 @@
 {% block link %}<link rel="stylesheet" href="{% static 'styles/songs.css' %}">{% endblock link %}
 
 {% block body %}
-
-<h1> songs </h1><br>
 <section class="navbar_container">
-	<div class=logo_container>
-
-
-	</div>
+	<a href="#">
+		<div class=logo_container>
+			<h1> songs </h1><br>
+		</div>
+	</a>
+	<a href="#">
 	<div class="search_container">
-
-
+		<a href="{% url 'search'  %}">
+			search
+		</a>
 	</div>
-
+	</a>
+	<a href="#">
 	<div class="profile_container">
 		<div class="greetings_container">
 			<h4> {{time}},</h4>
@@ -23,26 +25,26 @@
 		</div>
 
 		<div class="profile">
+			<div class="image"></div>
+			<div class="logout">
+				
+
+			<h3 ><a style="color:red; text-decoration:none;" href="{%					url 'logout' %}"> logout</a>
+			</h3>
+
+			</div>
 
 		</div>
 
 	</div>
-
+	</a>
 </section>
-<a href="{% url 'search'  %}">
-	search
-</a>
-
-<h3 ><a style="color:red; text-decoration:none;" href="{% url 'logout' %}"> logout</a></h3>
-
+{% comment  %}
 {%for genre in gen_items%}
 <li>{{genre}}</li>
 {%endfor%}
 
-
-
-
-
+{% endcomment  %}
 
 
 {% endblock body %}
