@@ -7,7 +7,6 @@ The API will be able to search for popular artist,playlist, popular songs, track
 
 Resources such as the power to search your favourite playlist, artist and songs of best choice.
 Some algorithms such as linked list and shuffling is used.
-Sorting algorithms such as quicksort 
 
 
 Payment methods.
